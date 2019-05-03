@@ -1,5 +1,8 @@
 import React from 'react';
+import { Switch, Route, withRouter } from 'react-router-dom';
+
 import Grid from './Grid';
+import Thumbnail from './Thumbnail';
 import './../index.css';
 
 class App extends React.Component {
@@ -23,8 +26,11 @@ class App extends React.Component {
     return(
       <div style={divStyle}>
         <h1>Stitch Grid</h1>
-      <Grid
-        onClick = {(i) => this.handleClick(i)}/>
+
+          <Thumbnail/>
+          <Grid
+            onClick = {(i) => this.handleClick(i)}/>
+
 
       </div>
     );
