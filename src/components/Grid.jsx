@@ -17,7 +17,7 @@ function Grid(props) {
       border: '1px solid #999',
 
     };
-
+// I think I should be able to generate the blocks with a set of loops
     function renderBlock(i) {
       const st = 16
       const r = 20
