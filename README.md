@@ -1,4 +1,95 @@
+# _Stitch Grid_
+
+#### Epicodus Capstone Project
+
+_Published_ **May 3 2019**<br>
+_Author_ **Tracy Reith**
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+1. [Description](#description)
+1. [Learning Objective](#learning-objective)
+1. [Target Audience/Users](#target-audience/users)
+1. [User Stories](#user-stories)
+1. [Product Requirements](#product-requirements)
+1. [Non-technical Requirements](#non-technical-requirements)
+1. [Assumptions](#assumptions)
+1. [Development Specs](#development-specs)
+1. [Installation](#installation)
+1. [Known Bugs](#known-bugs)
+1. [Technologies Used](#technologies-used)
+1. [License](#license)
+
+### Description
+With Stitch Grid (working name) the user can design and save small motifs and repeats for color knitting. The user can click blocks, that represent knit stitches, in a grid, toggling between light and dark. Grids are saved in and retrieved from a database. A thumbnail view allows for instant identification of past grids saved.
+
+Ultimately the application will be built and deployed as a native iOS app for iPhone and iPad. The initial proof of concept will be a React web application.
+
+### Learning Objective
+
+
+Minimum Viable Product Requirements
+Toggle a grid block between two colors in response to a tap/click
+Pre-defined grid size
+Grid proportions
+4 stitches per inch (horizontal scale)
+5 rows per inch (vertical scale)
+White background
+Black foreground
+Grey grid lines
+Save a pattern to database
+Date
+Thumbnail
+Retrieve pattern from database
+Thumbnail view of saved patterns
+Edit pattern and save to database
+Date updated
+Tools, Frameworks, Libraries, APIs, Modules and/or Other Resources to create MVP
+React
+Firebase
+HTML5
+CSS
+Beyond MVP
+Select colors
+Background - when background color selection is changed, entire background is changed
+Multiple foreground colors - when foreground color selection is changed, existing foreground blocks are retained; new instance of foreground selection is changed
+Grid lines - when grid line color selection is changed, all grid lines are changed
+User-defined grid size
+Overall size
+Grid proportions
+Number of stitches per inch (horizontal scale)
+Number of rows per inch (vertical scale)
+Name pattern
+Display pattern information
+Name
+Date last saved
+Thumbnail
+Port to iOS
+Zoom and pan
+Additional tools, frameworks, libraries, APIs, or other resources for extended functionality
+React Native
+
+Competitors/Existing Alternatives Currently on iOS App Store
+I have researched several alternatives available on the iOS App Store and have not found any of the ones I downloaded and tried to be particularly easy to use. I currently use StitchSketch, which is very full-featured, but more complex than I would like.
+
+Stitch Designer - $12.99
+Targeted toward cross-stitch
+
+StitchSketch - $7.99
+
+Text2CrossStitch - $3.99
+Targeted toward cross-stitch
+Primarily for transforming text into cross-stitch pattern
+
+PatternCraft - $3.99
+Includes symbols as well as colors
+
+Knitting Chart - Free
+
+knitCompanion - Free
+
+
 
 ## Available Scripts
 
