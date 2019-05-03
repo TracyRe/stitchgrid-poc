@@ -15,6 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 1. [Product Requirements](#product-requirements)
 1. [Non-technical Requirements](#non-technical-requirements)
 1. [Assumptions](#assumptions)
+1. [Competitive Analysis](#competitive-analysis)
 1. [Development Specs](#development-specs)
 1. [Installation](#installation)
 1. [Known Bugs](#known-bugs)
@@ -72,48 +73,63 @@ Create a React project from scratch, integrate with a database (Firebase).
 **I want** to name my design,<br>
 **So that** I have another reference besides the thumbnail when I retrieve it.
 
-Minimum Viable Product Requirements
-Toggle a grid block between two colors in response to a tap/click
-Pre-defined grid size
-Grid proportions
-4 stitches per inch (horizontal scale)
-5 rows per inch (vertical scale)
-White background
-Black foreground
-Grey grid lines
-Save a pattern to database
-Date
-Thumbnail
-Retrieve pattern from database
-Thumbnail view of saved patterns
-Edit pattern and save to database
-Date updated
+### Product Requirements
+#### Minimum Viable Product - Phase 1
+* Toggle a grid block between two colors in response to a tap/click
+* Pre-defined grid size
+* Grid proportions
+ * 4 stitches per inch (horizontal scale)
+ * 5 rows per inch (vertical scale)
+* Pre-defined grid colors
+ * White background
+ * Black foreground
+ * Grey grid lines
+* Automatically save a pattern to database
+ * Date
+ * Thumbnail
+* Retrieve pattern from database
+ * Thumbnail view of saved patterns
+* Edit pattern and save to database
+ * Date updated
+
+#### Phase 2
+Port to iOS with React native
+
+#### Phase 3
+* User selected colors
+ * Background - when background color selection is changed, entire background is changed
+ * Multiple foreground colors - when foreground color  selection is changed, existing foreground blocks are  retained; new instance of foreground selection is changed
+ * Grid lines - when grid line color selection is changed, all grid lines are changed
+* User-defined grid size
+ * Overall size
+* Grid proportions
+ * Number of stitches per inch (horizontal scale)
+ * Number of rows per inch (vertical scale)
+* Name pattern
+* Display pattern information
+* Name
+* Date last saved
+* Thumbnail
+
+### Non-technical Requirements
+
+### Assumptions
+
+
+### Development Specs
+
+
 Tools, Frameworks, Libraries, APIs, Modules and/or Other Resources to create MVP
 React
 Firebase
 HTML5
 CSS
-Beyond MVP
-Select colors
-Background - when background color selection is changed, entire background is changed
-Multiple foreground colors - when foreground color selection is changed, existing foreground blocks are retained; new instance of foreground selection is changed
-Grid lines - when grid line color selection is changed, all grid lines are changed
-User-defined grid size
-Overall size
-Grid proportions
-Number of stitches per inch (horizontal scale)
-Number of rows per inch (vertical scale)
-Name pattern
-Display pattern information
-Name
-Date last saved
-Thumbnail
-Port to iOS
-Zoom and pan
+
 Additional tools, frameworks, libraries, APIs, or other resources for extended functionality
 React Native
 
-Competitors/Existing Alternatives Currently on iOS App Store
+### Competitive Analysis
+####Currently on iOS App Store
 I have researched several alternatives available on the iOS App Store and have not found any of the ones I downloaded and tried to be particularly easy to use. I currently use StitchSketch, which is very full-featured, but more complex than I would like.
 
 Stitch Designer - $12.99
