@@ -1,4 +1,5 @@
 import React from 'react';
+import Block from './Block';
 
 class App extends React.Component {
   constructor(props) {
@@ -8,37 +9,36 @@ class App extends React.Component {
     };
   }
 
-  handleClick = (e) => {
+  handleClick = (i) => {
     this.setState({ fill: !this.state.fill })
+    alert('click');
+
   }
 
   render() {
+    console.log(this.state);
+    const gridStyle = {
+
+      display: 'grid',
+      gridTemplateColumns: 'repeat(16,1fr)',
+      gridTemplateRows: 'repeat(20, 1fr)',
+      gridGap: '1px 1px',
+      alignItems: 'stretch',
+      height: '200px',
+      width: '200px',
+      background: '#999',
+      border: '1px solid #999',
+
+    };
+
     return(
       <div>
         <h1>Hello</h1>
         <div>
-          <style jsx>{`
-              .block {
-                height: 50px;
-                width: 50px;
-              }
+          <div style={gridStyle}>
+            <Block
+              onClick = {(i) => this.handleClick(i)} />
 
-              .background {
-                height: 100%;
-                width: 100%;
-                background: #d6f0ff;
-              }
-
-              .foreground {
-                height: 100%;
-                width: 100%;
-                background: #6b1f87;
-              }
-            `}
-          </style>
-          <div className='block'>
-            <div className = {(this.state.fill) ? 'foreground' : 'background'}
-              onClick = {this.handleClick}></div>
           </div>
         </div>
 
