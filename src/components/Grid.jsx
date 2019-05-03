@@ -19,20 +19,22 @@ function Grid(props) {
     };
 
     function renderBlock(i) {
-      return (
-      <Block  onClick = {() => props.onClick(i)} />
-      );
+      const st = 16
+      const r = 20
+
+      for (let j = 0; j < st - 1; j ++) {
+        for (let i = 0; i < r - 1; i ++) {
+          return (
+          <Block  onClick = {() => props.onClick(i)} />
+          );
+        }
+      }
     }
 
     return (
 
       <div style={gridStyle}>
         {renderBlock(0)}
-        {renderBlock(1)}
-        {renderBlock(2)}
-        {renderBlock(3)}
-        {renderBlock(4)}
-
       </div>
 
     );
