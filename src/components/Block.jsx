@@ -7,7 +7,7 @@ function Block(props) {
 
     console.log(props);
   return (
-    <div className={(props.fill) ? 'foreground' : 'background'} >
+    <div className={(props.fill) ? 'foreground' : 'background'} onClick = {props.onClick}>
       <style jsx='true'> {`
           .background  {
             height: 100%;

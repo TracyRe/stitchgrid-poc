@@ -2,6 +2,7 @@ import React from 'react';
 import Block from './Block';
 
 function Grid(props) {
+  console.log(props)
 
     const gridStyle = {
 
@@ -17,10 +18,20 @@ function Grid(props) {
 
     };
 
+    function renderBlock(i) {
+      return (
+      <Block  onClick = {() => props.onClick(i)} />
+      );
+    }
+
     return (
 
       <div style={gridStyle}>
-      <Block />
+        {renderBlock(0)}
+        {renderBlock(1)}
+        {renderBlock(2)}
+        {renderBlock(3)}
+        {renderBlock(4)}
 
       </div>
 

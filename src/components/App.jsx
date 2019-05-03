@@ -12,15 +12,20 @@ class App extends React.Component {
 
   handleClick = (i) => {
     this.setState({ fill: !this.state.fill })
-    // alert('click');
+    alert('click');
 
   }
 
+
   render() {
+    const divStyle = {
+      padding: '20px'
+    };
     return(
-      <div>
+      <div style={divStyle}>
         <h1>Stitch Grid</h1>
-      <Grid/>
+      <Grid
+        onClick = {(i) => this.handleClick(i)}/>
 
       </div>
     );
