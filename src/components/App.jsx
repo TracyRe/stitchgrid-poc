@@ -10,11 +10,6 @@ class App extends React.Component {
     };
   }
 
-  handleClick = (i) => {
-    this.setState({ fill: !this.state.fill })
-    alert('click');
-
-  }
 
 
   render() {

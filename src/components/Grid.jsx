@@ -20,7 +20,7 @@ function Grid(props) {
 
     function renderBlock(i) {
       return (
-      <Block  onClick = {() => props.onClick(i)} />
+      <Block  />
       );
     }
 

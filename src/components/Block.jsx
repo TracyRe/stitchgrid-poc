@@ -5,6 +5,13 @@ function Block(props) {
   //
   // }
 
+  function onClick(i) {
+    this.setState({ fill: !props.fill })
+    alert('click');
+
+  }
+
+
     console.log(props);
   return (
     <div className={(props.fill) ? 'foreground' : 'background'} onClick = {props.onClick}>
