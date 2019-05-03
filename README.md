@@ -24,10 +24,53 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Description
 With Stitch Grid (working name) the user can design and save small motifs and repeats for color knitting. The user can click blocks, that represent knit stitches, in a grid, toggling between light and dark. Grids are saved in and retrieved from a database. A thumbnail view allows for instant identification of past grids saved.
 
-Ultimately the application will be built and deployed as a native iOS app for iPhone and iPad. The initial proof of concept will be a React web application.
+Ultimately the application will be built and deployed as a native iOS app for iPhone and iPad. The initial proof of concept will be a React web application with limited functionality.
 
 ### Learning Objective
+Create a React project from scratch, integrate with a database (Firebase).
 
+### Target Audience/Users
+* Me - I am making this primarily for personal use
+* Knitters who do color knitting of small repeats, e.g. Fair Isle
+* Cross stitchers
+* Beaders
+
+### User Stories
+**As a** knitter,<br>
+**I want** to toggle stitch blocks on and off with a single tap,<br>
+**So that** I can quickly try ideas for color patterns.
+
+**As a** knitter,<br>
+**I want** the application to automatically save my actions,<br>
+**So that** I can retrieve my design at a later time.
+
+**As a** knitter,<br>
+**I want** the application to display thumbnail views of saved designs,<br>
+**So that** I can select the desired design at a later time.
+
+**As a** knitter,<br>
+**I want** to choose my own color for the foreground color,<br>
+**So that** my design is close to the actual yarn color I intend to use.
+
+**As a** knitter,<br>
+**I want** to choose my own color for the background color,<br>
+**So that** my design is close to the actual yarn color I intend to use.
+
+**As a** knitter,<br>
+**I want** to choose my own color for the grid lines color,<br>
+**So that** there's enough contrast that I can distinguish between blocks in the grid.
+
+**As a** knitter,<br>
+**I want** to specify grid size,<br>
+**So that** I have a large enough grid for the size of design I am planning.
+
+**As a** knitter,<br>
+**I want** to specify stitch and row scale,<br>
+**So that** the stitch and row scale is an accurate representation of my stitch gauge.
+
+**As a** knitter,<br>
+**I want** to name my design,<br>
+**So that** I have another reference besides the thumbnail when I retrieve it.
 
 Minimum Viable Product Requirements
 Toggle a grid block between two colors in response to a tap/click
