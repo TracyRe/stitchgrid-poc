@@ -78,6 +78,9 @@ Create a React project from scratch, integrate with a database (Firebase).
 ### Wireframe - MVP
 ![MVP - Mobile Layout](./support/iphone-mvp.png?raw=true "MVP - Mobile Layout")
 
+### Component Structure
+![Component Structure](./support/component-structure.png?raw=true "Component Structure")
+
 ### Product Requirements
 #### Minimum Viable Product - Phase 1
 * Toggle a grid block between two colors in response to a tap/click
