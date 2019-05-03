@@ -5,9 +5,6 @@
 _Published_ **May 3 2019**<br>
 _Author_ **Tracy Reith**
 
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 1. [Description](#description)
 1. [Learning Objective](#learning-objective)
 1. [Target Audience/Users](#target-audience/users)
@@ -16,7 +13,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 1. [Non-technical Requirements](#non-technical-requirements)
 1. [Assumptions](#assumptions)
 1. [Competitive Analysis](#competitive-analysis)
-1. [Development Specs](#development-specs)
 1. [Installation](#installation)
 1. [Known Bugs](#known-bugs)
 1. [Technologies Used](#technologies-used)
@@ -37,6 +33,7 @@ Create a React project from scratch, integrate with a database (Firebase).
 * Beaders
 
 ### User Stories
+#### MVP - Phase 1
 **As a** knitter,<br>
 **I want** to toggle stitch blocks on and off with a single tap,<br>
 **So that** I can quickly try ideas for color patterns.
@@ -49,6 +46,11 @@ Create a React project from scratch, integrate with a database (Firebase).
 **I want** the application to display thumbnail views of saved designs,<br>
 **So that** I can select the desired design at a later time.
 
+**As a** knitter,<br>
+**I want** to retrieve an existing design,<br>
+**So that** I can make changes to it.
+
+#### Phase 3
 **As a** knitter,<br>
 **I want** to choose my own color for the foreground color,<br>
 **So that** my design is close to the actual yarn color I intend to use.
@@ -72,6 +74,9 @@ Create a React project from scratch, integrate with a database (Firebase).
 **As a** knitter,<br>
 **I want** to name my design,<br>
 **So that** I have another reference besides the thumbnail when I retrieve it.
+
+### Wireframe - MVP
+![MVP - Mobile Layout](./support/iphone-mvp.png?raw=true "MVP - Mobile Layout")
 
 ### Product Requirements
 #### Minimum Viable Product - Phase 1
@@ -107,112 +112,48 @@ Port to iOS with React native
  * Number of rows per inch (vertical scale)
 * Name pattern
 * Display pattern information
-* Name
-* Date last saved
-* Thumbnail
+ * Name
+ * Date last saved
+ * Thumbnail
 
 ### Non-technical Requirements
-
-### Assumptions
-
-
-### Development Specs
-
-
-Tools, Frameworks, Libraries, APIs, Modules and/or Other Resources to create MVP
-React
-Firebase
-HTML5
-CSS
-
-Additional tools, frameworks, libraries, APIs, or other resources for extended functionality
-React Native
+* The application should be easy to use without instruction.
+* The application should minimize the number of controls required to function.
 
 ### Competitive Analysis
-####Currently on iOS App Store
+#### Currently on iOS App Store
 I have researched several alternatives available on the iOS App Store and have not found any of the ones I downloaded and tried to be particularly easy to use. I currently use StitchSketch, which is very full-featured, but more complex than I would like.
 
-Stitch Designer - $12.99
+**Stitch Designer** - $12.99
 Targeted toward cross-stitch
 
-StitchSketch - $7.99
+**StitchSketch** - $7.99
+Biggest drawback is an explicit save function, contradicting mobile conventions. If you forget to tap the save icon, you lose what you've created. Includes a wide range of stitch symbols and colors.
 
-Text2CrossStitch - $3.99
+**Text2CrossStitch** - $3.99
 Targeted toward cross-stitch
-Primarily for transforming text into cross-stitch pattern
+Primarily for transforming text into cross-stitch pattern.
 
-PatternCraft - $3.99
-Includes symbols as well as colors
+**PatternCraft** - $3.99
+Includes stitch symbols as well as colors.
 
-Knitting Chart - Free
-
-knitCompanion - Free
-
+**Knitting Chart** - Free, $2.99 for all features
+This actually is rather nice, simpler than StitchSketch, and I probably would have downloaded it if I had found it before I found StitchSketch.
 
 
-## Available Scripts
+### Installation
+* Clone from https://github.com/TracyRe/stitchgrid-poc.git
+* Run `$ npm install`
 
-In the project directory, you can run:
+### Known Bugs
+* I don't know how to act on something that is in a different component
 
-### `npm start`
+### Technologies Used
+* React
+* Firebase
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### License
+[MIT](./LICENSE.txt)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Copyright (c) 2019 Tracy Reith
