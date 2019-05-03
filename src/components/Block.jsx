@@ -4,28 +4,22 @@ function Block(props) {
   // function onClick() {
   //
   // }
-
-  function onClick(i) {
-    this.setState({ fill: !props.fill })
-    alert('click');
-
-  }
+  console.log(props);
 
 
-    console.log(props);
   return (
+    // I don't understand how 'background' (the falsy value) is getting passed to className if state = false for 'fill' is not being passed down from App
     <div className={(props.fill) ? 'foreground' : 'background'} onClick = {props.onClick}>
       <style jsx='true'> {`
-          .background  {
-            height: 100%;
-            width: 100%;
-            background: #eee;
-          }
-
           .foreground  {
             height: 100%;
             width: 100%;
             background: #222;
+          }
+          .background  {
+            height: 100%;
+            width: 100%;
+            background: #fefefe;
           }
         `}
 
@@ -37,7 +31,3 @@ function Block(props) {
 
 
 export default Block;
-
-
-// {(props.fill) ? 'foreground' : 'background'}
-// onClick = {()=> props.onClick()}

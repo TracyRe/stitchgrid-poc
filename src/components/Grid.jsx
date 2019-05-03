@@ -11,8 +11,8 @@ function Grid(props) {
       gridTemplateRows: 'repeat(20, 1fr)',
       gridGap: '1px 1px',
       alignItems: 'stretch',
-      height: '200px',
-      width: '200px',
+      height: '400px',
+      width: '400px',
       background: '#999',
       border: '1px solid #999',
 
@@ -20,7 +20,7 @@ function Grid(props) {
 
     function renderBlock(i) {
       return (
-      <Block  />
+      <Block  onClick = {() => props.onClick(i)} />
       );
     }
 

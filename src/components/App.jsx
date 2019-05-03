@@ -5,12 +5,16 @@ import './../index.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
+    this.state = {   //This isn't doing anything. I need it to do something
       fill: false
     };
   }
 
+  handleClick = (i) => {
+    this.setState({ fill: !this.state.fill })
+    alert('click');
 
+  }
 
   render() {
     const divStyle = {
