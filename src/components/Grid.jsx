@@ -25,13 +25,12 @@ function Grid(props) {
       const r = 20
       let gridarr = [];
 
-      for (let j = 0; j < r - 1; j ++) {
-        for (let i = 0; i < st - 1; i ++) {
-          return (
-          gridarr.push(<Block key={i} />)
-          );
+      for (let j = 0; j < r; j ++) {
+        for (let i = 0; i < st; i ++) {
+          gridarr.push(<Block key={[j][i]} />)
         }
       }
+      return gridarr;
     }
     // function renderBlock(i) {
     //
@@ -42,7 +41,7 @@ function Grid(props) {
 
     return (
       <div style={gridStyle}>
-        <Block/> <Block/><Block/><Block/>
+        {renderBlock()}
       </div>
 
     );
