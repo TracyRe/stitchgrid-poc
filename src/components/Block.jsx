@@ -5,29 +5,32 @@ function Block(props) {
   //
   // }
   console.log(props);
-
+  const blockStyle = {
+    background: '#fefefe'
+  }
 
   return (
     // I don't understand how 'background' (the falsy value) is getting passed to className if state = false for 'fill' is not being passed down from App
-    <div className={(props.fill) ? 'foreground' : 'background'} onClick = {props.onClick}>
-      <style jsx='true'> {`
-          .foreground  {
-            height: 100%;
-            width: 100%;
-            background: #222;
-          }
-          .background  {
-            height: 100%;
-            width: 100%;
-            background: #fefefe;
-          }
-        `}
+    <div style={blockStyle}></div>
 
-    </style>
-    </div>
 
   );
 }
 
 
 export default Block;
+
+// className={(props.fill) ? 'foreground' : 'background'} onClick = {props.onClick}>
+//   <style jsx='true'> {`
+//       .foreground  {
+//         height: 100%;
+//         width: 100%;
+//         background: #222;
+//       }
+//       .background  {
+//         height: 100%;
+//         width: 100%;
+//         background: #fefefe;
+//       }
+//     `}
+    // </style>

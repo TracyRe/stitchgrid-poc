@@ -1,40 +1,32 @@
 import React from 'react';
-import { Switch, Route, withRouter } from 'react-router-dom';
-
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import Error404 from './Error404';
+import Header from './Header';
 import Grid from './Grid';
-import Thumbnail from './Thumbnail';
+import Thumbnails from './Thumbnails';
 import './../index.css';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {   //This isn't doing anything. I need it to do something
-      fill: false
-    };
+
+function App()  {
+
+
+  const divStyle = {
+    padding: '0 20px'
   }
 
-  handleClick = (i) => {
-    this.setState({ fill: !this.state.fill })
-    alert('click');
-
-  }
-
-  render() {
-    const divStyle = {
-      padding: '20px'
-    };
-    return(
-      <div style={divStyle}>
-        <h1>Stitch Grid</h1>
-
-          <Thumbnail/>
-          <Grid
-            onClick = {(i) => this.handleClick(i)}/>
-
-
-      </div>
-    );
-  }
+  return(
+    <div style={divStyle}>
+      <Router>
+        <Header/>
+        <Switch>
+          <Route exact path='/' component={Thumbnails}/>
+          <Route path='/grid' component={Grid}/>
+          <Route component={Error404}/>
+        </Switch>
+      </Router>
+    </div>
+  );
 }
+
 
 export default App;

@@ -18,23 +18,41 @@ function Grid(props) {
 
     };
 // I think I should be able to generate the blocks with a set of loops
-    function renderBlock(i) {
-      const st = 16
-      const r = 20
-
-      for (let j = 0; j < st - 1; j ++) {
-        for (let i = 0; i < r - 1; i ++) {
-          return (
-          <Block  onClick = {() => props.onClick(i)} />
-          );
-        }
-      }
-    }
-
+    // function renderBlock(i) {
+    //   const st = 16
+    //   const r = 20
+    //   let gridarr = [];
+    //
+    //   for (let j = 0; j < st - 1; j ++) {
+    //     for (let i = 0; i < r - 1; i ++) {
+    //       return (
+    //       gridarr.push('<div></div>'
+    //       );
+    //     }
+    //   }
+    // }
     return (
-
       <div style={gridStyle}>
-        {renderBlock(0)}
+        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
       </div>
 
     );

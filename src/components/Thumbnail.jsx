@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Thumbnail(props) {
+function Thumbnail() {
   return (
     <div>
-      <h1>Thumbnails go here</h1>
+      <li>Thumbnail</li>
     </div>
 
   );
