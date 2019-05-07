@@ -2,7 +2,9 @@ import React from 'react';
 import Block from './Block';
 
 function Grid(props) {
-  console.log(props)
+  console.log(props);
+
+
 
     const gridStyle = {
 
@@ -18,41 +20,29 @@ function Grid(props) {
 
     };
 // I think I should be able to generate the blocks with a set of loops
+    function renderBlock(i) {
+      const st = 16
+      const r = 20
+      let gridarr = [];
+
+      for (let j = 0; j < r - 1; j ++) {
+        for (let i = 0; i < st - 1; i ++) {
+          return (
+          gridarr.push(<Block key={i} />)
+          );
+        }
+      }
+    }
     // function renderBlock(i) {
-    //   const st = 16
-    //   const r = 20
-    //   let gridarr = [];
     //
-    //   for (let j = 0; j < st - 1; j ++) {
-    //     for (let i = 0; i < r - 1; i ++) {
     //       return (
-    //       gridarr.push('<div></div>'
+    //       <Block onClick={() => props.onClick(i)} />
     //       );
     //     }
-    //   }
-    // }
+
     return (
       <div style={gridStyle}>
-        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
-        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
-        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
-        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
-        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
-        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
-        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
-        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
-        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
-        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
-        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
-        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
-        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
-        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
-        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
-        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
-        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
-        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
-        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
-        <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+        <Block/> <Block/><Block/><Block/>
       </div>
 
     );
@@ -60,3 +50,26 @@ function Grid(props) {
 
 
 export default Grid;
+
+// onClick={() => props.onClick(i)}
+
+// <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+// <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+// <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+// <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+// <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+// <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+// <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+// <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+// <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+// <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+// <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+// <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+// <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+// <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+// <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+// <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+// <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+// <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+// <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
+// <Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/><Block/>
