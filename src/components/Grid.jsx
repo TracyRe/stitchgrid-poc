@@ -20,14 +20,14 @@ function Grid(props) {
 
     };
 // I think I should be able to generate the blocks with a set of loops
-    function renderBlock(i) {
+    function renderBlock(i, index) {
       const st = 16
       const r = 20
       let gridarr = [];
 
       for (let j = 0; j < r; j ++) {
         for (let i = 0; i < st; i ++) {
-          gridarr.push(<Block key={[j][i]} />)
+          gridarr.push(<Block key = {[j,i]} />)
         }
       }
       return gridarr;
