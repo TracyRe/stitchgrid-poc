@@ -14,9 +14,6 @@ class Block extends React.Component {
   }
 
   render() {
-    const blockStyle = {
-      background: '#fefefe'
-    }
 
     return (
 
@@ -32,9 +29,9 @@ class Block extends React.Component {
           </style></div>
         );
       }
-  }
+    }
 
 
-export default Block;
+    export default Block;
 
-// style={blockStyle}
+    // style={blockStyle}
