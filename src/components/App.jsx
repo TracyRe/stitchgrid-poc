@@ -7,9 +7,13 @@ import Thumbnails from './Thumbnails';
 import './../index.css';
 
 
-function App()  {
 
+class App extends React.Component  {
+  constructor(props) {
+    super(props);
+  }
 
+render() {
   const divStyle = {
     padding: '0 20px'
   }
@@ -26,6 +30,8 @@ function App()  {
       </Router>
     </div>
   );
+}
+
 }
 
 

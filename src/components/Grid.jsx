@@ -1,5 +1,6 @@
 import React from 'react';
 import Block from './Block';
+import { v4 } from 'uuid';
 
 class Grid extends React.Component {
 
@@ -8,7 +9,7 @@ class Grid extends React.Component {
   }
 
   render() {
-    function renderBlock(i, index) {
+    function renderBlock() {
       const st = 16
       const r = 20
       let gridarr = [];
@@ -34,11 +35,9 @@ class Grid extends React.Component {
       border: '1px solid #999',
     };
     return (
-      <div>
         <div style={gridStyle}>
           {renderBlock()}
         </div>
-      </div>
 
     );
 
