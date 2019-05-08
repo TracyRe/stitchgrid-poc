@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import Error404 from './Error404';
 import Header from './Header';
 import Grid from './Grid';
-import Thumbnails from './Thumbnails';
+import ThumbnailList from './ThumbnailList';
 import './../index.css';
 
 
@@ -23,7 +23,7 @@ render() {
       <Router>
         <Header/>
         <Switch>
-          <Route exact path='/' component={Thumbnails}/>
+          <Route exact path='/' component={ThumbnailList}/>
           <Route path='/grid' component={Grid}/>
           <Route component={Error404}/>
         </Switch>

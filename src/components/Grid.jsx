@@ -35,7 +35,8 @@ class Grid extends React.Component {
       border: '1px solid #999',
     };
     return (
-        <div style={gridStyle}>
+        <div
+          style={gridStyle}>
           {renderBlock()}
         </div>
 
