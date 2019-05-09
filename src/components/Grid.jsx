@@ -7,7 +7,6 @@ class Grid extends React.Component {
   constructor(props) {
     super(props);
   }
-
   render() {
     function renderBlock() {
       const st = 16
@@ -34,14 +33,13 @@ class Grid extends React.Component {
       background: '#999',
       border: '1px solid #999',
     };
+
     return (
-        <div
-          style={gridStyle}>
-          {renderBlock()}
-        </div>
-
+      <div
+        style={gridStyle}>
+        {renderBlock()}
+      </div>
     );
-
   }
 }
 

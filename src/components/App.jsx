@@ -11,6 +11,14 @@ import './../index.css';
 class App extends React.Component  {
   constructor(props) {
     super(props);
+    this.state = {}
+    this.handleAddNewGrid = this.handleAddNewGrid.bind(this);
+  }
+
+  handleAddNewGrid(newGrid) {
+    let newGridList = Object.assign({},
+    this.state.gridList);
+    this.setState({gridList: newGridList})
   }
 
 render() {
@@ -23,7 +31,8 @@ render() {
       <Router>
         <Header/>
         <Switch>
-          <Route exact path='/' component={ThumbnailList}/>
+          <Route exact path='/' render={() => <ThumbnailList
+            gridList = {this.state.gridList}/>}/>
           <Route path='/grid' component={Grid}/>
           <Route component={Error404}/>
         </Switch>

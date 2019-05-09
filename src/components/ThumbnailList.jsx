@@ -1,15 +1,15 @@
 import React from 'react';
 import Thumbnail from './Thumbnail';
 
-function Thumbnails() {
+function Thumbnails(props) {
   return (
     <div>
       <ul>
-        <li>List</li>
-        <li>of</li>
-        <Thumbnail/>
-        <li>go</li>
-        <li>here</li>
+        {Object.keys(props.gridList).map(function(gridId) {
+          var grid = props.gridList[gridId];
+          return <Thumbnail
+            key = {gridId} />
+        })}
       </ul>
     </div>
 
