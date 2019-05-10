@@ -1,12 +1,12 @@
 import React from 'react';
 import Thumbnail from './Thumbnail';
 
-function Thumbnails(props) {
+function ThumbnailList(props) {
   return (
     <div>
       <ul>
         {Object.keys(props.gridList).map(function(gridId) {
-          var grid = props.gridList[gridId];
+          const grid = props.gridList[gridId];
           return <Thumbnail
             key = {gridId} />
         })}
@@ -17,4 +17,4 @@ function Thumbnails(props) {
 }
 
 
-  export default Thumbnails;
+  export default ThumbnailList;

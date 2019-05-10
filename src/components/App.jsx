@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { v4 } from 'uuid';
 import Error404 from './Error404';
 import Header from './Header';
 import Grid from './Grid';
@@ -12,12 +13,16 @@ class App extends React.Component  {
   constructor(props) {
     super(props);
     this.state = {}
-    this.handleAddNewGrid = this.handleAddNewGrid.bind(this);
+    this.handleAddNewGridToList = this.handleAddNewGridToList.bind(this);
   }
 
-  handleAddNewGrid(newGrid) {
+  handleAddNewGridToList(newGrid) {
+    let newGridId = v4();
     let newGridList = Object.assign({},
-    this.state.gridList);
+    this.state.gridList,
+      {
+        [newGridId]: newGrid
+      });
     this.setState({gridList: newGridList})
   }
 
@@ -33,7 +38,9 @@ render() {
         <Switch>
           <Route exact path='/' render={() => <ThumbnailList
             gridList = {this.state.gridList}/>}/>
-          <Route path='/grid' component={Grid}/>
+          <Route path='/grid' render={() => <Grid
+              grid =
+              {this.state.grid}/>}/>
           <Route component={Error404}/>
         </Switch>
       </Router>
