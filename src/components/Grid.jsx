@@ -1,9 +1,13 @@
 import React from 'react';
 import Block from './Block';
-import { v4 } from 'uuid';
+import PropTypes from 'prop-types';
 
-function Grid()  {
+function Grid(props)  {
+  let grid   = {};
 
+  function newGrid() {
+    props.AddNewGrid();
+  }
 
     function renderBlock() {
       const st = 16
@@ -39,7 +43,9 @@ function Grid()  {
     );
   }
 
-
+Grid.propTypes = {
+  grid: PropTypes.func
+};
 
 export default Grid;
 

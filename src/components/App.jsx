@@ -38,7 +38,8 @@ render() {
         <Switch>
           <Route exact path='/' render={() => <ThumbnailList
             gridList = {this.state.gridList}/>}/>
-          <Route path='/grid' component ={Grid}/>
+          <Route path='/grid' render={() => <Grid
+            AddNewGrid = {this.handleAddNewGridToList}/>}/>
           <Route component={Error404}/>
         </Switch>
       </Router>
