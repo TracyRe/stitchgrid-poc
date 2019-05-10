@@ -2,15 +2,9 @@ import React from 'react';
 import Block from './Block';
 import { v4 } from 'uuid';
 
-class Grid extends React.Component {
+function Grid()  {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      grid : {}
-    }
-  }
-  render() {
+
     function renderBlock() {
       const st = 16
       const r = 20
@@ -44,7 +38,7 @@ class Grid extends React.Component {
       </div>
     );
   }
-}
+
 
 
 export default Grid;

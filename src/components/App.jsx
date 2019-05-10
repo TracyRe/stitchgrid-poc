@@ -38,9 +38,7 @@ render() {
         <Switch>
           <Route exact path='/' render={() => <ThumbnailList
             gridList = {this.state.gridList}/>}/>
-          <Route path='/grid' render={() => <Grid
-              grid =
-              {this.state.grid}/>}/>
+          <Route path='/grid' component ={Grid}/>
           <Route component={Error404}/>
         </Switch>
       </Router>
