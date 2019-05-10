@@ -5,10 +5,9 @@ function ThumbnailList(props) {
   return (
     <div>
       <ul>
-        {Object.keys(props.gridList).map(function(gridId) {
-          const grid = props.gridList[gridId];
-          return <Thumbnail
-            key = {gridId} />
+        {Object.keys(props.gridList).map(function( ) {
+          const grid = props.gridList;
+          return <Thumbnail/>
         })}
       </ul>
     </div>
