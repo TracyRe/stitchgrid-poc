@@ -11,7 +11,7 @@ function Header()  {
   return(
     <div style={divStyle}>
       <h1>DSstitchGrid</h1>
-      <Link to = '/'>Home</Link> | <Link to = '/grid'>New Grid</Link>
+      <Link to = '/'>Home</Link> | <Link to = '/newgrid'>New Grid</Link>
     </div>
   );
 }
