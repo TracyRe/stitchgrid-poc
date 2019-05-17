@@ -13,6 +13,7 @@ _Author_ **Tracy Reith**
 1. [Non-technical Requirements](#non-technical-requirements)
 1. [Assumptions](#assumptions)
 1. [Competitive Analysis](#competitive-analysis)
+1. [Development Plan](#development-plan)
 1. [Installation](#installation)
 1. [Known Bugs](#known-bugs)
 1. [Technologies Used](#technologies-used)
@@ -75,7 +76,7 @@ Create a React project from scratch, integrate with a database (Firebase).
 **I want** to name my design,<br>
 **So that** I have another reference besides the thumbnail when I retrieve it.
 
-### Wireframe - MVP
+### Wireframe - MVP Mobile App
 ![MVP - Mobile Layout](./support/iphone-mvp.png?raw=true "MVP - Mobile Layout")
 
 ### Component Structure
@@ -140,9 +141,17 @@ Primarily for transforming text into cross-stitch pattern.
 **PatternCraft** - $3.99
 Includes stitch symbols as well as colors.
 
-**Knitting Chart** - Free, $2.99 for all features
+**Knitting Chart** - Free for basic version, $2.99 for all features
 This actually is rather nice, simpler than StitchSketch, and I probably would have downloaded it if I had found it before I found StitchSketch.
 
+
+### Development Plan
+1. ~~Toggle foreground / background color of single block~~  _DONE_
+1. ~~Generate grid array, with blocks with local state~~ _DONE_
+1. Generate and save multiple grid arrays in application state, return list of multiple grids
+1. Refactor to keep grids in Local Storage
+1. Refactor to Redux
+1. Instantiate Firebase and refactor to store grids in database
 
 ### Installation
 * Clone from https://github.com/TracyRe/stitchgrid-poc.git
