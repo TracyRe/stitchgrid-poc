@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 function Grid(props)  {
   let grid   = {};
 
-  function newGrid() {
-    props.AddNewGrid();
-  }
+  // function newGrid() {
+  //   props.AddNewGrid();
+  // }
 
     function renderBlock() {
       const st = 16

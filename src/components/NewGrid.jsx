@@ -1,27 +1,31 @@
 import React from 'react';
+import {withRouter} from 'react-router-dom';
 import Block from './Block';
 import PropTypes from 'prop-types';
 
 function NewGrid(props)  {
   let grid   = {};
 
-  function newGrid() {
-    props.AddNewGrid();
-  }
+  // function newGrid() {
+  //   props.AddNewGrid();
+  // }
 
-    function renderBlock() {
-      const st = 16
-      const r = 20
+    const renderBlock = (e) => {
+      e.preventDefault();
+      let st = e.target.st.value;
+      let r = e.target.r.value;
       let gridarr = [];
-
+      let masterArr = [];
       for (let j = 0; j < r; j ++) {
+        masterArr.push([]);
         for (let i = 0; i < st; i ++) {
-          gridarr.push(<Block key = {[j,i]} />)
+          masterArr[j].push('false');
         }
       }
-      return gridarr;
+      props.AddNewGrid(masterArr);
     }
 
+    // props.history.push('/');
 
     const gridStyle = {
       display: 'grid',
@@ -36,9 +40,14 @@ function NewGrid(props)  {
     };
 
     return (
-      <div
-        style={gridStyle}>
-        {renderBlock()}
+      <div>
+        <form onSubmit = {renderBlock}>
+          <input placeholder='rows' id='r'/>
+          <input placeholder='stitches' id='st'/>
+          <button type='submit'>Submit</button>
+        </form>
+
+
       </div>
     );
   }
@@ -47,6 +56,4 @@ NewGrid.propTypes = {
   grid: PropTypes.func
 };
 
-export default NewGrid;
-
-// onClick={() => props.onClick(i)}
+export default withRouter(NewGrid);
