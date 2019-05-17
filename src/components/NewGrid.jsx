@@ -42,6 +42,7 @@ function NewGrid(props)  {
     return (
       <div>
         <form onSubmit = {renderBlock}>
+          Does this branch work?
           <input placeholder='rows' id='r'/>
           <input placeholder='stitches' id='st'/>
           <button type='submit'>Submit</button>
