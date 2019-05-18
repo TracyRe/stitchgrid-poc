@@ -4,14 +4,11 @@ import PropTypes from 'prop-types';
 
 function Grid(props)  {
   let grid   = {};
-
-  // function newGrid() {
-  //   props.AddNewGrid();
-  // }
+  console.log(props);
 
     function renderBlock() {
-      const st = 16
-      const r = 20
+      let st = 16
+      let r = 20
       let gridarr = [];
 
       for (let j = 0; j < r; j ++) {
@@ -29,8 +26,12 @@ function Grid(props)  {
       gridTemplateRows: 'repeat(20, 1fr)',
       gridGap: '1px 1px',
       alignItems: 'stretch',
-      height: '400px',
-      width: '400px',
+      height: '80vw',
+      width: '80vw',
+      minWidth: '300px',
+      minHeight: '300px',
+      maxWidth: '500px',
+      maxHeight: '500px',
       background: '#999',
       border: '1px solid #999',
     };

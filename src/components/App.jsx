@@ -4,6 +4,7 @@ import { v4 } from 'uuid';
 import Error404 from './Error404';
 import Header from './Header';
 import NewGrid from './NewGrid';
+import Grid from './Grid';
 import ThumbnailList from './ThumbnailList';
 import './../index.css';
 
@@ -42,6 +43,8 @@ render() {
           <Route exact path='/' render={() => <ThumbnailList
             gridList = {this.state.gridList}/>}/>
           <Route path='/newgrid' render={() => <NewGrid
+            AddNewGrid = {this.handleAddNewGridToList}/>}/>
+          <Route path='/grid' render={() => <Grid
             AddNewGrid = {this.handleAddNewGridToList}/>}/>
           <Route component={Error404}/>
         </Switch>

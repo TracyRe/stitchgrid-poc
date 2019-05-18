@@ -19,36 +19,21 @@ function NewGrid(props)  {
       for (let j = 0; j < r; j ++) {
         masterArr.push([]);
         for (let i = 0; i < st; i ++) {
-          masterArr[j].push('false');
+          masterArr[j].push(<Block key = {[j,i]} fill = 'false'/>);
         }
       }
       props.AddNewGrid(masterArr);
+      // props.history.push('/');
+      console.log(masterArr);
     }
-
-    // props.history.push('/');
-
-    const gridStyle = {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(16,1fr)',
-      gridTemplateRows: 'repeat(20, 1fr)',
-      gridGap: '1px 1px',
-      alignItems: 'stretch',
-      height: '400px',
-      width: '400px',
-      background: '#999',
-      border: '1px solid #999',
-    };
 
     return (
       <div>
         <form onSubmit = {renderBlock}>
-          Does this branch work?
           <input placeholder='rows' id='r'/>
           <input placeholder='stitches' id='st'/>
           <button type='submit'>Submit</button>
         </form>
-
-
       </div>
     );
   }
