@@ -4,32 +4,27 @@ import Block from './Block';
 import PropTypes from 'prop-types';
 
 function NewGrid(props)  {
-  let grid   = {};
+  let grid = {};
 
-  // function newGrid() {
-  //   props.AddNewGrid();
-  // }
-
-    const renderBlock = (e) => {
+    const addNewGridSubmit = (e) => {
       e.preventDefault();
       let st = e.target.st.value;
       let r = e.target.r.value;
-      let gridarr = [];
-      let masterArr = [];
+      let gridArr = [];
       for (let j = 0; j < r; j ++) {
-        masterArr.push([]);
+        gridArr.push([]);
         for (let i = 0; i < st; i ++) {
-          masterArr[j].push(<Block key = {[j,i]} fill = 'false'/>);
+          gridArr[j].push(<Block key = {[j,i]} fill = 'false'/>);
         }
       }
-      props.AddNewGrid(masterArr);
-      // props.history.push('/');
-      console.log(masterArr);
+      props.AddNewGrid(gridArr);
+      props.history.push('/grid');
+      console.log(gridArr);
     }
 
     return (
       <div>
-        <form onSubmit = {renderBlock}>
+        <form onSubmit = {addNewGridSubmit}>
           <input placeholder='rows' id='r'/>
           <input placeholder='stitches' id='st'/>
           <button type='submit'>Submit</button>

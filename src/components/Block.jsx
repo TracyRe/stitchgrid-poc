@@ -3,21 +3,19 @@ import React from 'react';
 class Block extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { fill: false };
+    }
   }
-
 
   handleClick = (e) => {
     e.preventDefault();
     // alert('click');
-    this.setState({ fill: !this.state.fill });
+    this.setState({ fill: !props.fill });
   }
 
   render() {
-
     return (
 
-      <div className={(this.state.fill) ? 'foreground' : 'background'} onClick = {this.handleClick}>
+      <div className={(props.fill) ? 'foreground' : 'background'} onClick = {props.handleClick}>
         <style jsx='true'> {`
             .foreground  {
               background: #222;
@@ -29,7 +27,8 @@ class Block extends React.Component {
           </style></div>
         );
       }
-    }
+
+  }
 
 
     export default Block;

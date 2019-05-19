@@ -35,23 +35,23 @@ render() {
     padding: '0 20px'
   }
 
-  return(
-    <div style={divStyle}>
-      <Router>
-        <Header/>
-        <Switch>
-          <Route exact path='/' render={() => <ThumbnailList
-            gridList = {this.state.gridList}/>}/>
-          <Route path='/newgrid' render={() => <NewGrid
-            AddNewGrid = {this.handleAddNewGridToList}/>}/>
-          <Route path='/grid' render={() => <Grid
-            AddNewGrid = {this.handleAddNewGridToList}/>}/>
-          <Route component={Error404}/>
-        </Switch>
-      </Router>
-    </div>
-  );
-}
+    return(
+      <div style={divStyle}>
+        <Router>
+          <Header/>
+          <Switch>
+            <Route exact path='/' render={() => <ThumbnailList
+              gridList = {this.state.gridList}/>}/>
+            <Route path='/newgrid' render={() => <NewGrid
+              AddNewGrid = {this.handleAddNewGridToList}/>}/>
+            <Route path='/grid' render={() => <Grid
+              renderBlock = {this.state.gridlist}/> } />
+            <Route component={Error404}/>
+          </Switch>
+        </Router>
+      </div>
+    );
+  }
 
 }
 

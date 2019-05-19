@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 
 
 function Thumbnail(props) {
+  let {gridId} = props;
+
   return (
-    <li><Link to = '/grid'>Thumbnail</Link></li>
+    <li><Link to = '/grid'>{gridId}</Link></li>
   );
 }
 

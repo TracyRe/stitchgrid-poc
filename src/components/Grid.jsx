@@ -3,17 +3,18 @@ import Block from './Block';
 import PropTypes from 'prop-types';
 
 function Grid(props)  {
-  let grid   = {};
+  // let grid   = {};
   console.log(props);
 
     function renderBlock() {
+      props.gridList(gridId)
       let st = 16
       let r = 20
       let gridarr = [];
 
       for (let j = 0; j < r; j ++) {
         for (let i = 0; i < st; i ++) {
-          gridarr.push(<Block key = {[j,i]} />)
+          gridarr.push(<Block  key = {props.key} fill={props.fill} />)
         }
       }
       return gridarr;
