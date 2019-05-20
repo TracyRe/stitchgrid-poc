@@ -4,18 +4,18 @@ class Block extends React.Component {
   constructor(props) {
     super(props);
     }
-  }
+
 
   handleClick = (e) => {
     e.preventDefault();
     // alert('click');
-    this.setState({ fill: !props.fill });
+    this.setState({ fill: !this.props.fill });
   }
 
   render() {
     return (
 
-      <div className={(props.fill) ? 'foreground' : 'background'} onClick = {props.handleClick}>
+      <div className={(this.props.fill) ? 'foreground' : 'background'} onClick = {this.props.handleClick}>
         <style jsx='true'> {`
             .foreground  {
               background: #222;
@@ -23,14 +23,11 @@ class Block extends React.Component {
             .background  {
               background: #fefefe;
             }
-            `}
+          `}
           </style></div>
         );
       }
-
-  }
+}
 
 
     export default Block;
-
-    // style={blockStyle}

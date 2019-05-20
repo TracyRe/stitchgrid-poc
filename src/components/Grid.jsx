@@ -3,11 +3,10 @@ import Block from './Block';
 import PropTypes from 'prop-types';
 
 function Grid(props)  {
-  // let grid   = {};
+  let {gridId}= props;
   console.log(props);
 
     function renderBlock() {
-      props.gridList(gridId)
       let st = 16
       let r = 20
       let gridarr = [];
@@ -38,17 +37,11 @@ function Grid(props)  {
     };
 
     return (
-      <div
-        style={gridStyle}>
+      <div style={gridStyle} >
         {renderBlock()}
       </div>
     );
   }
 
-Grid.propTypes = {
-  grid: PropTypes.func
-};
 
 export default Grid;
-
-// onClick={() => props.onClick(i)}
