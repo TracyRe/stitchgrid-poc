@@ -2,6 +2,7 @@ import React from 'react';
 import Thumbnail from './Thumbnail';
 
 function ThumbnailList(props) {
+  console.log(props);
   return (
     <div>
       <ul>

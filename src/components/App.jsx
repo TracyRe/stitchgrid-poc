@@ -52,7 +52,9 @@ render() {
               gridList = {this.state.gridList}/>}/>
             <Route path='/newgrid' render={() => <NewGrid
               AddNewGrid = {this.handleAddNewGridToList}/>}/>
-            <Route render={() => <Grid editGrid = {this.handleEditGrid}/>}/>
+            <Route render={() => <Grid
+                editGrid = {this.handleEditGrid}
+                gridList = {this.state.gridList}/>}/>
             <Route component={Error404}/>
           </Switch>
         </Router>
