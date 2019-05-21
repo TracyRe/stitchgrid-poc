@@ -3,7 +3,6 @@ import Block from './Block';
 import PropTypes from 'prop-types';
 
 function Grid(props)  {
-  let {gridId}= props;
   console.log(props);
 
     function renderBlock() {
@@ -13,7 +12,7 @@ function Grid(props)  {
 
       for (let j = 0; j < r; j ++) {
         for (let i = 0; i < st; i ++) {
-          gridarr.push(<Block  key = {props.key} fill={props.fill} />)
+          gridarr.push(<Block fill={props.fill} />)
         }
       }
       return gridarr;

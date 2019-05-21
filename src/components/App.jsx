@@ -18,6 +18,8 @@ class App extends React.Component  {
       }
     }
     this.handleAddNewGridToList = this.handleAddNewGridToList.bind(this);
+
+    this.handleEditGrid = this.handleEditGrid.bind(this);
   }
 
   handleAddNewGridToList(newGrid) {
@@ -28,6 +30,12 @@ class App extends React.Component  {
         [newGridId]: newGrid
       });
     this.setState({gridList: newGridList})
+  }
+
+  handleEditGrid(gridId, updatedGrid) {
+    let newGridList = Object.assign({}, this.state.gridList);
+    newGridList[gridId] = updatedGrid;
+    this.setState({gridList: newGridList});
   }
 
 render() {
@@ -44,7 +52,7 @@ render() {
               gridList = {this.state.gridList}/>}/>
             <Route path='/newgrid' render={() => <NewGrid
               AddNewGrid = {this.handleAddNewGridToList}/>}/>
-            <Route component= {Grid} />
+            <Route render={() => <Grid editGrid = {this.handleEditGrid}/>}/>
             <Route component={Error404}/>
           </Switch>
         </Router>

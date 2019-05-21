@@ -9,6 +9,7 @@ function ThumbnailList(props) {
           const grid = props.gridList[gridId];
           return <Thumbnail
             key = {gridId}
+            gridId = {gridId}
             />
         })}
       </ul>

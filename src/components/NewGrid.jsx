@@ -22,27 +22,11 @@ function NewGrid(props)  {
       console.log(gridArr);
     }
 
-        const gridStyle = {
-          display: 'grid',
-          gridTemplateColumns: 'repeat(16,1fr)',
-          gridTemplateRows: 'repeat(20, 1fr)',
-          gridGap: '1px 1px',
-          alignItems: 'stretch',
-          height: '80vw',
-          width: '80vw',
-          minWidth: '300px',
-          minHeight: '300px',
-          maxWidth: '500px',
-          maxHeight: '500px',
-          background: '#999',
-          border: '1px solid #999',
-        };
-
     return (
       <div>
         <form onSubmit = {addNewGridSubmit}>
-          <input placeholder='rows' id='r'/>
-          <input placeholder='stitches' id='st'/>
+          <input placeholder='rows' id='r' required />
+          <input placeholder='stitches' id='st' required />
           <button type='submit'>Submit</button>
         </form>
       </div>

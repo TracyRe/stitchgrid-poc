@@ -2,6 +2,7 @@ import React from 'react';
 
 class Block extends React.Component {
   constructor(props) {
+    console.log(props);
     super(props);
     }
 
@@ -13,9 +14,10 @@ class Block extends React.Component {
   }
 
   render() {
+
     return (
 
-      <div className={(this.props.fill) ? 'foreground' : 'background'} onClick = {this.props.handleClick}>
+      <div className={(this.props.fill) ? 'foreground' : 'background'} onClick = {this.handleClick}>
         <style jsx='true'> {`
             .foreground  {
               background: #222;
