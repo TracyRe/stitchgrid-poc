@@ -18,6 +18,8 @@ function Grid(props)  {
             console.log(props.gridList[gridId][j][i]);
             const block = props.gridList[gridId][j][i];
             return <Block
+              fill = {block.fill}
+              key = {key}
               />
           })}
         })}
